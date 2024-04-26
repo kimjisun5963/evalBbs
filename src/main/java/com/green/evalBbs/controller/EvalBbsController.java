@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.green.evalBbs.dao.IEvalBbsDao;
@@ -39,5 +40,12 @@ public class EvalBbsController {
 		return "detail";
 	}
 	
+	@RequestMapping("/delete")
+	public String deletDto(@RequestParam("bno") String bnos) {
+		int bno = Integer.parseInt(bnos);
+		dao.deleteDto(bno);
+		
+		return "redirect:list";
+	}
 	
 }

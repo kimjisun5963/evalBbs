@@ -16,7 +16,7 @@
     작성자 : ${dto.writer}<br>
     작성날짜 : ${dto.regdate}<br>
     <br>
-    <a href="/delete">삭제</a>
+    <a href="/delete?bno=${dto.bno}">삭제</a>
 
 </body>
 </html>
