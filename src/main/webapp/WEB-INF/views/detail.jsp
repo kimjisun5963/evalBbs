@@ -10,13 +10,14 @@
 <body>
     <h1>detail page</h1>
     <hr/>
-    게시물 번호 : ${dto.bno}<br>
-    제목 : ${dto.title}<br>
-    내용 : ${dto.content}<br>
-    작성자 : ${dto.writer}<br>
-    작성날짜 : ${dto.regdate}<br>
+    게시물 번호 : <strong>${dto.bno}</strong><br>
+    제목 : <strong>${dto.title}</strong><br>
+    내용 : <strong>${dto.content}</strong><br>
+    작성자 : <strong>${dto.writer}</strong><br>
+    작성날짜 : <strong>${dto.regdate}</strong><br>
     <br>
-    <a href="/delete?bno=${dto.bno}">삭제</a>
+    <a href="/delete?bno=${dto.bno}">삭제</a><br>
+    <a href="/list">목록보기</a>
 
 </body>
 </html>
