@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.green.evalBbs.dao.IEvalBbsDao;
+import com.green.evalBbs.dto.EvalBbsDto;
 
 @Controller
 public class EvalBbsController {
@@ -45,6 +46,17 @@ public class EvalBbsController {
 		int bno = Integer.parseInt(bnos);
 		dao.deleteDto(bno);
 		
+		return "redirect:list";
+	}
+	
+	@RequestMapping("/writeForm")
+	public String writeDto() {
+		return "writeForm";
+	}
+	
+	@RequestMapping("/write")
+	public String write(EvalBbsDto evalBbsDto) {
+		dao.regDto(evalBbsDto.getTitle(), evalBbsDto.getContent(), evalBbsDto.getWriter());
 		return "redirect:list";
 	}
 	

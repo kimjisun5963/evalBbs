@@ -29,6 +29,6 @@
             </c:forEach>
         </tbody>
     </table>
-    <a href="/write">글 작성하기</a><br>
+    <a href="/writeForm">글 작성하기</a><br>
 </body>
 </html>

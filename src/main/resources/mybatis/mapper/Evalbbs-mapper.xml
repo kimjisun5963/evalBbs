@@ -12,4 +12,7 @@
 	<delete id="deleteDto">
 		DELETE FROM evalbbs WHERE bno = #{bno};	
 	</delete>
+	<insert id="regDto">
+		INSERT INTO evalbbs VALUES(NULL, #{param1}, #{param2},#{param3}, date(NOW()));
+	</insert>
 </mapper>
