@@ -10,5 +10,6 @@ import com.green.evalBbs.dto.EvalBbsDto;
 public interface IEvalBbsDao {
 	
 	public List<EvalBbsDto> getList();
+	public EvalBbsDto getDto(int bno);
 
 }
